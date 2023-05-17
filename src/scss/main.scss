@@ -1,0 +1,10 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./variables";
+@import "./mixins";
+@import "./helpers";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
