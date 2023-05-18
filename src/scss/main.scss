@@ -1,7 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-@import "./variables";
-@import "./mixins";
-@import "./helpers";
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./helpers/helpers";
+
+@import "./blocks/blocks";
 
 * {
   margin: 0;

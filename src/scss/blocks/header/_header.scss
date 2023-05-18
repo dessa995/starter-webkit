@@ -1,0 +1,100 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+  background-color: $blue-light;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.license-link {
+  font-size: 8px;
+  text-decoration: none;
+  color: $white;
+}
+
+.header__logo {
+  max-width: 80px;
+}
+
+/*----------------------------------------------------
+##Navigation
+------------------------------------------------------*/
+
+.header__site-nav {
+  max-width: 70%;
+  width: 100%;
+}
+
+.header__nav-wrapper--outer {
+  display: flex;
+  align-items: center;
+  height: 85px;
+  width: 100%;
+}
+
+.header__nav-wrapper--inner {
+  display: flex;
+  width: 100%;
+}
+
+.header__nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+
+.header__nav-item {
+  max-width: 250px;
+  width: 100%;
+}
+
+.header__nav-link-item {
+  color: $white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  &:nth-last-of-type() {
+    margin-bottom: 0;
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $blue-light;
+  box-shadow: 2px 2px 39px -19px rgba($black, 0.75);
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  transition: $dur $ease;
+}
+
+.menu-item:hover {
+  .sub-menu {
+    visibility: visible;
+    max-height: 300px;
+    height: fit-content;
+  }
+}
