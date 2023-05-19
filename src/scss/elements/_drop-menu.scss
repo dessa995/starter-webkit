@@ -1,0 +1,38 @@
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: $dur $ease;
+
+  &:nth-last-of-type() {
+    margin-bottom: 0;
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: $black;
+  box-shadow: 2px 2px 39px -19px rgba($blue-neon, 0.75);
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  transition: $dur $ease;
+
+  & > .menu-item {
+    margin: 0 20px;
+  }
+}
+
+.menu-item:hover {
+  .sub-menu {
+    visibility: visible;
+    max-height: 500px;
+    height: fit-content;
+    padding: 20px 0;
+  }
+}

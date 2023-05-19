@@ -1,7 +1,7 @@
 let sliderContainer = document.querySelector(".js-slider-container");
 let leftSliderButton = document.querySelector(".js-left-slider-button");
 let rightSliderButton = document.querySelector(".js-right-slider-button");
-// import sliderImages from "./sliderImages.json";
+import sliderImages from "./sliderImages.json";
 
 let sliderGenerator = () => {
   sliderImages.forEach((image) => {

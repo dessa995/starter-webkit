@@ -1,11 +1,11 @@
-import { openAccordionTab } from "./accordion.js";
-import { onHoverMenu } from "./dropMenu.js";
-import { responsiveNavBar } from "./responsiveNavbar.js";
-import { sliderGenerator } from "./slider.js";
+import { openAccordionTab } from "./modules/accordion";
+import { responsiveNavBar } from "./modules/responsiveNavbar";
+import rotateBorder from "./modules/rotateBorder";
+// import { sliderGenerator } from "./modules/slider";
 
 import "../scss/main.scss";
 
-sliderGenerator();
-openAccordionTab();
-onHoverMenu();
-responsiveNavBar();
+// sliderGenerator();
+// openAccordionTab();
+// responsiveNavBar();
+rotateBorder();

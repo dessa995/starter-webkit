@@ -1,7 +1,7 @@
 .site-header {
   display: flex;
   flex-direction: column;
-  background-color: $blue-light;
+  background-color: $black;
 }
 
 .header-container {
@@ -18,7 +18,7 @@
 .license-link {
   font-size: 8px;
   text-decoration: none;
-  color: $white;
+  color: $blue-light;
 }
 
 .header__logo {
@@ -60,41 +60,12 @@
 }
 
 .header__nav-link-item {
-  color: $white;
+  color: $blue-neon;
   text-decoration: none;
   font-size: 20px;
-}
-
-.menu-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-
-  &:nth-last-of-type() {
-    margin-bottom: 0;
-  }
-}
-
-.sub-menu {
-  position: absolute;
-  top: 30px;
-  left: -30px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: $blue-light;
-  box-shadow: 2px 2px 39px -19px rgba($black, 0.75);
-  visibility: hidden;
-  overflow: hidden;
-  max-height: 0;
   transition: $dur $ease;
-}
 
-.menu-item:hover {
-  .sub-menu {
-    visibility: visible;
-    max-height: 300px;
-    height: fit-content;
+  &:hover {
+    color: $gold-light;
   }
 }
