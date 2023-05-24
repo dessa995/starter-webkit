@@ -23,16 +23,36 @@
   max-height: 0;
   transition: $dur $ease;
 
+  @include mq($xl) {
+    position: static;
+  }
+
   & > .menu-item {
     margin: 0 20px;
   }
 }
 
-.menu-item:hover {
-  .sub-menu {
+@media only screen and (min-width: 1201px) {
+  .menu-item:hover {
+    .sub-menu {
+      visibility: visible;
+      max-height: 500px;
+      height: fit-content;
+      padding: 20px 0;
+    }
+  }
+}
+
+/*----------------------------------------------------
+##Accordion-submenu
+----------------------------------------------------*/
+
+.menu-link.active + .sub-menu {
+  @include mq($xl) {
     visibility: visible;
     max-height: 500px;
     height: fit-content;
     padding: 20px 0;
+    margin-top: 20px;
   }
 }

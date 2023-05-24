@@ -8,13 +8,14 @@
 -------------------------------------------------------*/
 
 @import "./elements/drop-menu";
+@import "./elements/hamburger";
 @import "./elements/rotating-border";
 
 /*-------------------------------------------------------
 ##Blocks
 -------------------------------------------------------*/
 
-@import "./blocks/blocks";
+@import "../templates/blocks/blocks";
 
 * {
   margin: 0;
@@ -23,5 +24,22 @@
 }
 
 body {
-  background-color: $black-light;
+  position: relative;
+  overflow: hidden;
+  background-color: $blue-light;
+}
+
+.site-main {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.empty-box {
+  display: block;
+  width: 500px;
+  height: 300px;
+  margin: auto;
+
+  @include center;
 }
