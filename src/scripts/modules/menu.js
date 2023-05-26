@@ -1,5 +1,7 @@
 "use strict";
 
+import Global from "./global";
+
 const Menu = {
   domSiteHeader: document.querySelector(".js-header"),
   domMenuBtn: document.querySelector(".js-menu-btn"),
@@ -14,7 +16,6 @@ const Menu = {
   },
 
   toggleMenu: function () {
-    console.log(this.classActive);
     if (!Menu.domMenuBtn.classList.contains(Menu.classActive)) {
       Menu.domSiteHeader.classList.add(this.classActive);
       Menu.domMenuBtn.classList.add(this.classActive);
@@ -36,6 +37,22 @@ const Menu = {
   bindEvents: function () {
     // this.toggleMenu.bind(this)
     Menu.domMenuBtn.addEventListener("click", this.toggleMenu.bind(this));
+    // Global.clickOutsideContainer(
+    //   Menu.domMenuOuter,
+    //   Menu.classActive,
+    //   "menu-item",
+    //   Menu.closeMenu
+    // );
+    window.addEventListener("mouseup", function (e) {
+      if (
+        Menu.domMenuOuter.classList.contains(Menu.classActive) &&
+        e.target != Menu.domMenuInner &&
+        !e.target.parentElement.classList.contains("menu-item")
+      ) {
+        console.log(e.target.parentElement);
+        Menu.closeMenu();
+      }
+    });
   },
 };
 

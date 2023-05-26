@@ -65,7 +65,7 @@
   }
 }
 
-.header__nav-items {
+.header__nav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +106,7 @@
 }
 
 .site-header__hamburger {
-  // display: none;
+  display: none;
 
   @include mq($xl) {
     display: block;

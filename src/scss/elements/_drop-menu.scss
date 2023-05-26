@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 15px 0;
   transition: $dur $ease;
 
   &:nth-last-of-type() {
@@ -11,7 +12,7 @@
 
 .sub-menu {
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: -30px;
   display: flex;
   flex-direction: column;
@@ -23,18 +24,26 @@
   max-height: 0;
   transition: $dur $ease;
 
+  > .menu-item {
+    > .sub-menu {
+      left: 0;
+      width: 100%;
+    }
+  }
+
   @include mq($xl) {
     position: static;
   }
 
   & > .menu-item {
-    margin: 0 20px;
+    padding: 15px 20px;
   }
 }
 
 @media only screen and (min-width: 1201px) {
   .menu-item:hover {
-    .sub-menu {
+    > .sub-menu {
+      overflow: visible;
       visibility: visible;
       max-height: 500px;
       height: fit-content;

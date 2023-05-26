@@ -1,4 +1,4 @@
-import { openAccordionTab } from "./modules/accordion";
+import { AccordionTabActions } from "./modules/accordion";
 import { responsiveNavBar } from "./modules/responsiveNavbar";
 import rotateBorder from "./modules/rotateBorder";
 import Menu from "./modules/menu";
@@ -7,7 +7,7 @@ import Menu from "./modules/menu";
 import "../scss/main.scss";
 
 // sliderGenerator();
-openAccordionTab();
+AccordionTabActions();
 // responsiveNavBar();
 rotateBorder();
 Menu.init();

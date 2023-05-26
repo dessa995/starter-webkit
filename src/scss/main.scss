@@ -1,4 +1,11 @@
+/*---------------------------------------------------------
+##Basic dependencies
+----------------------------------------------------------*/
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+/*---------------------------------------------------------
+##Helpers
+----------------------------------------------------------*/
 @import "./helpers/variables";
 @import "./helpers/mixins";
 @import "./helpers/helpers";
@@ -27,6 +34,10 @@ body {
   position: relative;
   overflow: hidden;
   background-color: $blue-light;
+}
+
+i {
+  margin-left: 3px;
 }
 
 .site-main {
