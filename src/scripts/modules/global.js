@@ -32,6 +32,7 @@ const Global = {
         !e.target.parentElement.classList.contains(parentEl)
       ) {
         callback(element);
+        console.log(e.target.parentElement.classList);
       }
     });
   },

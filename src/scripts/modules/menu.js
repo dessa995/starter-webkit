@@ -1,7 +1,5 @@
 "use strict";
 
-import Global from "./global";
-
 const Menu = {
   domSiteHeader: document.querySelector(".js-header"),
   domMenuBtn: document.querySelector(".js-menu-btn"),
@@ -17,8 +15,8 @@ const Menu = {
 
   toggleMenu: function () {
     if (!Menu.domMenuBtn.classList.contains(Menu.classActive)) {
-      Menu.domSiteHeader.classList.add(this.classActive);
       Menu.domMenuBtn.classList.add(this.classActive);
+      Menu.domSiteHeader.classList.add(this.classActive);
       Menu.domMenuOuter.classList.add(this.classActive);
     } else {
       this.closeMenu();
@@ -37,19 +35,15 @@ const Menu = {
   bindEvents: function () {
     // this.toggleMenu.bind(this)
     Menu.domMenuBtn.addEventListener("click", this.toggleMenu.bind(this));
-    // Global.clickOutsideContainer(
-    //   Menu.domMenuOuter,
-    //   Menu.classActive,
-    //   "menu-item",
-    //   Menu.closeMenu
-    // );
+
     window.addEventListener("mouseup", function (e) {
       if (
         Menu.domMenuOuter.classList.contains(Menu.classActive) &&
         e.target != Menu.domMenuInner &&
-        !e.target.parentElement.classList.contains("menu-item")
+        e.target != Menu.domMenuBtn &&
+        !e.target.parentElement.classList.contains("menu-item") &&
+        !e.target.parentElement.classList.contains("header__nav-item")
       ) {
-        console.log(e.target.parentElement);
         Menu.closeMenu();
       }
     });

@@ -1,7 +1,7 @@
 import { AccordionTabActions } from "./modules/accordion";
-import { responsiveNavBar } from "./modules/responsiveNavbar";
 import rotateBorder from "./modules/rotateBorder";
 import Menu from "./modules/menu";
+import ActivatePopup from "./modules/flash-popup";
 // import { sliderGenerator } from "./modules/slider";
 
 import "../scss/main.scss";
@@ -11,3 +11,7 @@ AccordionTabActions();
 // responsiveNavBar();
 rotateBorder();
 Menu.init();
+ActivatePopup();
+window.addEventListener("resize", () => {
+  ActivatePopup();
+});

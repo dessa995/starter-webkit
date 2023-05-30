@@ -1,8 +1,12 @@
 .site-header {
-  // position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  background-color: $black;
+  width: 100%;
+  background-color: transparent;
+  z-index: 999;
 }
 
 .header-container {
@@ -20,7 +24,7 @@
 .license-link {
   font-size: 8px;
   text-decoration: none;
-  color: $blue-light;
+  color: $gold-light;
 }
 
 .header__logo {
@@ -53,7 +57,7 @@
     top: 0;
     width: 300px;
     height: 100vh;
-    background-color: $blue-light;
+    background-color: $black-light;
     display: block;
     padding: 105px 30px;
     transform: translateX(100%);
@@ -90,13 +94,13 @@
 }
 
 .header__nav-link-item {
-  color: $blue-neon;
+  color: $gold-light;
   text-decoration: none;
   font-size: 20px;
   transition: $dur $ease;
 
   &:hover {
-    color: $gold-light;
+    color: $white;
   }
 
   @include mq($xl) {
